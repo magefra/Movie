@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MovieRank.Infrastructure.Comunications
 {
-    class MovieRankResponse
+    public class MovieRankResponse
     {
     }
 }

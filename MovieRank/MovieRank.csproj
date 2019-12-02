@@ -1,7 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.104" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.100.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MovieRank.Core\MovieRank.Core.csproj" />
+    <ProjectReference Include="..\MovieRank.Infrastructure\MovieRank.Infrastructure.csproj" />
+    <ProjectReference Include="..\MovieRank.Services\MovieRank.Services.csproj" />
+  </ItemGroup>
 
 </Project>
