@@ -74,5 +74,16 @@ namespace MovieRank.Infrastructure.Repositories
 
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="movieDb"></param>
+        /// <returns></returns>
+        public async Task AddMovie(MovieDb movieDb)
+        {
+            await _context.SaveAsync(movieDb);
+        }
+
     }
 }

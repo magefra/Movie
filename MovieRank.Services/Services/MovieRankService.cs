@@ -72,5 +72,18 @@ namespace MovieRank.Services
             return _mapper.ToMovieContract(response);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="movieRankRequest"></param>
+        /// <returns></returns>
+        public async Task AddMovie(int userId, MovieRankRequest movieRankRequest)
+        {
+            var movieDB = _mapper.ToMovieDbModel(userId, movieRankRequest);
+
+            await _movieRankRepository.AddMovie(movieDB);
+        }
+
     }
 }

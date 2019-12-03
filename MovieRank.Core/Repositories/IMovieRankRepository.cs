@@ -32,5 +32,14 @@ namespace MovieRank.Core.Repositories
         /// <param name="movieName"></param>
         /// <returns></returns>
         Task<IEnumerable<MovieDb>> GetUserRankedMoviesByMovieTitle(int userId, string movieName);
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="movieDb"></param>
+        /// <returns></returns>
+        Task AddMovie(MovieDb movieDb);
     }
 }
