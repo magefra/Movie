@@ -41,5 +41,22 @@ namespace MovieRank.Services.Services
         /// <param name="movieRankRequest"></param>
         /// <returns></returns>
         Task AddMovie(int userId, MovieRankRequest movieRankRequest);
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="movieUpdateRequest"></param>
+        /// <returns></returns>
+        Task UpdateMovie(int userId, MovieUpdateRequest movieUpdateRequest);
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="movieName"></param>
+        /// <returns></returns>
+        Task<MovieRankResponse> GetMovieRank(string movieName);
     }
 }

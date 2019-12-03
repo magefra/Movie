@@ -83,6 +83,35 @@ namespace MovieRank.Infrastructure.Repositories
         public async Task AddMovie(MovieDb movieDb)
         {
             await _context.SaveAsync(movieDb);
+        
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public async Task UpdateMovie(MovieDb request)
+        {
+            await _context.SaveAsync(request);
+        }
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="movieName"></param>
+        /// <returns></returns>
+        public async Task<IEnumerable<MovieDb>> GetMovieRank(string movieName)
+        {
+            var config = new DynamoDBOperationConfig
+            {
+                IndexName = "MovieName-index"
+            };
+
+            return await _context.QueryAsync<MovieDb>(movieName, config).GetRemainingAsync();
         }
 
     }
